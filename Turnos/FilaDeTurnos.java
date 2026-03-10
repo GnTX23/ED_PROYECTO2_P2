@@ -45,8 +45,29 @@ public class FilaDeTurnos {
         if (primer == null){
             ultimo = null;
         }
-        totalEsperando--;
-        
+        totalEsperando--; /*Disminuye el contador de clientes esperando*/
+        System.out.println("Atendiendo al cliente con turno numero: " + turnoAtentido);
      }
-
+     /*Ahora vamos a revisar el siguiente en la fila */
+        public void verSiguiente(){
+            if(estaVacia()){
+                System.out.println("No hay clientes esperando.");
+            } else {
+                System.out.println("El siguiente cliente en la fila tiene el turno numero: " + primer.numeroTurno);
+            }
+     }
+        /*Y por ultimo, vamos a revisar cuantos clientes hay esperando */
+        public void ostrarFila(){
+            if(estaVacia()){
+                System.out.println("No hay clientes esperando.");
+            return;
+            }
+            System.out.println("Clientes esperando en la fila:");
+            Turnos actual = primer; /*Empezamos desde el primer cliente*/
+            while(actual != null){ /*Mientras haya clientes en la fila */
+                System.out.println(" - Turno: #" + actual.numeroTurno);
+                actual = actual.siguiente;
+            }
+            System.out.println("FINAL DE LA FILA");
+        }
 }
