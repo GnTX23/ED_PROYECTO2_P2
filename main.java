@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import Catalogo.ListaEnlazada;
 import Catalogo.producto;
+import Turnos.FilaDeTurnos;
 
 public class main {
     public static void main(String[] args) {
@@ -98,6 +99,29 @@ public class main {
           
 
         /*TURNOS */
+        FilaDeTurnos fila = new FilaDeTurnos(); /*crea una fila vacia */
+        System.out.println("Bienvenido al sistema de turnos, por favor ingrese su nombre: ");
+        //Llegan 4 clientes WOW 
+        fila.llegaCliente(1);
+        fila.llegaCliente(2);
+        fila.llegaCliente(3);
+        fila.llegaCliente(4);
+
+        System.out.println("Ahora, vamos a atender a los clientes: ");
+        fila.ostrarFila(); /*Muestra cuantos clientes hay esperando*/
+        fila.mostrarEstado(); /*Muestra el siguiente cliente en la fila*/
+        fila.verSiguiente(); 
+
+        System.out.println();
+        System.out.println("Cajero disponible");
+        fila.atenderSiguiente(); /*Atiende al siguiente cliente en la fila*/
+        fila.atenderSiguiente(); /*Atiende al siguiente cliente en la fila*/
+
+        System.out.println();
+        fila.ostrarFila();
+        fila.mostrarEstado();
+
+
 
     }    
     
