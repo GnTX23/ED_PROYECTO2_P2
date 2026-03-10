@@ -141,6 +141,60 @@ public class main {
             cce.init();
         }
 
+
+        do{
+            System.out,println("Agregar pedido")
+             System.out,println("Eliminar pedido")
+              System.out,println("Ver pedido")
+               System.out,println("volver")
+
+               opcionTurnos = sc.nextInt();
+            sc.nextLine(); // Limpiar el buffer
+
+            switch(opcionPedidos){
+                case 1: 
+         if (tope == max){
+             System.out.println(null, "La pila de pedidos esta llena");
+            else{
+               tope++;
+               v[tope]=Byte.parseByte(System.out.println("Digite el numero del pedido"));
+               pila.push(nuevoPedido); //Insertar ultimo elemento al tope de la lista      //metodo push
+               System.out.println(null, "Pedido agregado" + v[tope]);
+
+            }
+            brak;
+         case 2:
+         if (!pila.isEmpty()){
+            System.out.println(null, "La pila de pedidos esta vacia");
+         }else{
+            pila.Pop();                                 //metodo pop
+            System.out.println(pila.peek());             //Elimina el pedido al frente de la pila pero lo ree escribe en consola para tenerlo en "historial"
+            i++;                                          //se agrega ese propucto eliminado a consola
+            System.out.println(null, "Pedido eliminado" + v[tope]);
+            tope--;
+         }
+         break;
+         case 3:
+         if (!pila.isEmpty()){
+            System.out.println(null, "La pila de pedidos esta vacia");
+         }else{
+            String pedidos="";
+            for(i=tope; i>=0; i--){
+               pedidos+=v[i] + "\n";
+            }
+            System.out.println(null, "Pedidos en la pila:\n" + pedidos);
+         }
+         break;
+         case 4:
+         System.out.println(null, "Volviendo al menu principal");
+         break;
+      }
+      default:{
+                    System.out.println("Esta opción es inválida");
+                }
+            }
+        }
+
     }    
     
     
