@@ -1,23 +1,24 @@
-package Turnos;
+package Turnos; /* el package es para organizar las clases*/
 
-public class FilaDeTurnos {
-    Turnos primer; /*El primer cliente en la fila*/
-    Turnos ultimo;/*El ultimo cliente en la fila*/
+public class FilaDeTurnos { /*se crea la clase FilaDeTurnos,todo esto es para definir los datos */
+    Turnos primer; /*El primer cliente en la fila, esto es para identificarlo claramente */
+    Turnos ultimo;//*El ultimo cliente en la fila, La fila necesita saber quien esta al frente y quien esta atras */
     int totalEsperando;/*Cunatos clientes hay en la fila*/
 
     /*Inicia con la fila vacia */
-    public FilaDeTurnos(){ 
-        this.primer = null;
+    public FilaDeTurnos(){  /*Se crea un constructor que se utiliza para inicializar la fila */
+        this.primer = null; 
         this.ultimo = null;
-        this.totalEsperando = 0;
+        this.totalEsperando = 0;/*Dado a que al dari comienzo, la fila empieza vacia */
     }
+
     /*Comprobamos que la fila este vacia */
-    public boolean estaVacia(){
-        return primer == null;/*si no hay nadie en primero o al frente, es porque si, esta vacia */
+    public boolean estaVacia(){ /*Utilizamos boolean para regresar un tru o false,si primero es null es que esta la fila vacia,más que nada se utilizara para evitar errores al dar comienzo :D */
+        return primer == null;/*si no hay nadie en primero o al frente, es porque si, efectivamente esta vacia :V*/
      }
     
      /*Al llegar un cliente, ira al final de la fila */
-     public void llegaCliente(int numeroTurno){
+     public void llegaCliente(int numeroTurno){ //Cuando llega un cliente, se le asigna un numero de turno, y se agrega al final de la fila. El numero de turno es un entero que se le asigna a cada cliente para identificar su orden en la fila. Este metodo se encarga de agregar al nuevo cliente al final de la fila y actualizar el contador de clientes esperando.*/
         Turnos nuevoTurnos = new Turnos(numeroTurno); /*Creamos un nuevo cliente con el numero de turno que se le asigna*/
         if (estaVacia()){
             /*Si la fila esta vacia, el cliente ira al frente */
@@ -28,8 +29,8 @@ public class FilaDeTurnos {
             ultimo.siguiente = nuevoTurnos; 
             ultimo = nuevoTurnos;
         }
-        totalEsperando++; /*aumenta el contador */
-        System.out.println("Llego el cliente con turno numero: " + numeroTurno);
+        totalEsperando++; /* se utilizara para aumenta el contador */
+        System.out.println("Llego el cliente con turno numero: " + numeroTurno); /*El System.out imprime el mensaje */
        /*¿por que estudio esto?*/
      }
 
