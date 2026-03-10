@@ -149,4 +149,14 @@ public class ColaCiclicaEstaciones {
 
         System.out.println("\nfin");
     }
+
+    public void mostrarCola() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarCola'");
+    }
+
+    public void rotarEstaciones(String personal) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'rotarEstaciones'");
+    }
 }

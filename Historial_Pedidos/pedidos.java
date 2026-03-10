@@ -1,4 +1,7 @@
 package Historial_Pedidos;
+import java.util.Stack;
+import java.util.Scanner;
+
 
  public class pedidos{
  public static void main (String args[]){
@@ -8,7 +11,7 @@ package Historial_Pedidos;
 
     byte v[] = new byte[10];
     while(op!=4){
-      op=Byte.parseByte(System.out.println("Digite un numero\n"+"1.Agregar pedido\n2.Deshaser ultimo pedido\n3.Ver pedidos\n4.Volver"));
+      op=Byte.parseByte(System.out.println("Digite un numero\n"+"1.Agregar pedido\n2.Deshacer ultimo pedido\n3.Ver pedidos\n4.Volver"));
       switch(op){
          case 1: 
          if (tope == max){
@@ -20,11 +23,14 @@ package Historial_Pedidos;
                System.out.println(null, "Pedido agregado" + v[tope]);
 
             }
-            brak;
-         case 2:
+            break;
+         case 2:{
          if (!pila.isEmpty()){
             System.out.println(null, "La pila de pedidos esta vacia");
-         }else{
+            
+         }
+         
+         else{
             pila.Pop();                                 //metodo pop
             System.out.println(pila.peek());             //Elimina el pedido al frente de la pila pero lo ree escribe en consola para tenerlo en "historial"
             i++;                                          //se agrega ese propucto eliminado a consola
@@ -50,4 +56,19 @@ package Historial_Pedidos;
    }
  }
  }
+       }
+
+ public void pop() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'pop'");
+ }
+
+ public void peek() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'peek'");
+ }
+
+ public void mostrarHistorial() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'mostrarHistorial'");
  }
