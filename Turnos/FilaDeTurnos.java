@@ -45,8 +45,8 @@ public class FilaDeTurnos {
         if (primer == null){
             ultimo = null;
         }
-        TotalEsperado--;/*Reducimos el contador */
-        System.out.println("llamando al cliente #" + turnoAtendido + "a la ventanilla")
+        totalEsperando--;
+        
      }
 
 }
