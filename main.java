@@ -3,6 +3,7 @@ import java.util.Scanner;
 import Catalogo.ListaEnlazada;
 import Catalogo.producto;
 import Turnos.FilaDeTurnos;
+import Estaciones.ColaCiclicaEstaciones;
 
 public class main {
     public static void main(String[] args) {
@@ -134,17 +135,11 @@ public class main {
             }
         } while (opcionTurnos != 5);
 
-
-
-
-
-
-
-
-
-
         /*ESTACIONES*/
-        
+        if (opcion == 10){
+            ColaCiclicaEstaciones cce = new ColaCiclicaEstaciones();
+            cce.init();
+        }
 
     }    
     

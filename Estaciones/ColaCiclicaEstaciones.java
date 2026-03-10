@@ -108,7 +108,7 @@ public class ColaCiclicaEstaciones {
         }
     }
 
-    public static void main(String[] args) {
+    public static void init() {
 
         System.out.println("Estaciones\n");
 
