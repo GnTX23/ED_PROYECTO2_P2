@@ -7,3 +7,4 @@ public class Turnos{
         this.siguiente = null;
     }
 }
+
