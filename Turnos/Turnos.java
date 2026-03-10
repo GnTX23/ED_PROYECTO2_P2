@@ -1,3 +1,4 @@
+package Turnos;
 public class Turnos{
     int numeroTurno; //Numero de turno del cliente
     Turnos siguiente; //Apunta al siguiente cliente
@@ -7,3 +8,4 @@ public class Turnos{
         this.siguiente = null;
     }
 }
+
