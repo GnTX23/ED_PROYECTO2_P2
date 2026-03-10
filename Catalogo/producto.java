@@ -6,6 +6,7 @@ public class producto {
     private int id;
     private String nombre;
     private double precio;
+    public producto siguiente;
         
 
         /*Se crea el constructor en base a los atributos */
