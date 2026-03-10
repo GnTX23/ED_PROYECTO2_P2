@@ -102,21 +102,24 @@ public class ListaEnlazada {
 
 
     }
-      /*MOSTRAR CATÁLOGO PARA JOPTIONSPAGE*/ 
-      public String mostrarcatalogo(){
-        if (IsEmpty()) return "El catálogo está vacío";
+      
+    /*MOSTRAR CATÁLOGO PARA JOPTIONSPAGE*/ 
+      public void mostrarcatalogo(){
+        if (IsEmpty()){
+            System.out.println("El catálogo está vacío");
+            return;
+        }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("CATÁLOGO DE PRODUCTOS");
-         producto actual = head;
-         int posicion = 1;
+        System.out.println("CATALOGO DE PRODUCTOS");
+        producto actual = head;
+        int posicion =1 ;
 
-         while (actual != null) {
-            sb.append(posicion + "."+ actual + "\n");
-            actual = actual.siguiente;
-            posicion++;
-         }
-         return sb.toString();
+        while (actual != null);
+        System.out.println(posicion + "." + actual);
+        actual = actual.siguiente;
+        posicion++;
     }
+
+
 }
 
