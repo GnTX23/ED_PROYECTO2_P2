@@ -100,26 +100,42 @@ public class main {
 
         /*TURNOS */
         FilaDeTurnos fila = new FilaDeTurnos(); /*crea una fila vacia */
-        System.out.println("Bienvenido al sistema de turnos, por favor ingrese su nombre: ");
-        //Llegan 4 clientes WOW 
-        fila.llegaCliente(1);
-        fila.llegaCliente(2);
-        fila.llegaCliente(3);
-        fila.llegaCliente(4);
+        int opcionTurnos =0;
+        int contadorTurnos = 1; //para asignar un numero de turno a cada cliente que llegue, se inicia en 1 y se incrementa cada vez que llega un nuevo cliente.
+        
+        do {
+            System.out.println("SISTEMA DE TURNOS");
+            System.out.println("1- Llegada de cliente");
+            System.out.println("2- Atender siguiente cliente");
+            System.out.println("3- Ver siguiente cliente");
+            System.out.println("4- Mostrar fila de turnos");
+            System.out.println("5- Salir");
+            System.out.println("Elige una opción: ");
+            opcionTurnos = sc.nextInt();
+            sc.nextLine(); // Limpiar el buffer
 
-        System.out.println("Ahora, vamos a atender a los clientes: ");
-        fila.ostrarFila(); /*Muestra cuantos clientes hay esperando*/
-        fila.mostrarEstado(); /*Muestra el siguiente cliente en la fila*/
-        fila.verSiguiente(); 
+            switch (opcionTurnos) {
+                case 1:
+                    fila.llegaCliente(contadorTurnos);
+                    contadorTurnos++;
+                    break;
+                case 2:
+                    fila.atenderSiguiente();
+                    break;
+                case 3:
+                    fila.verSiguiente();
+                    break;
+                case 4:
+                    fila.ostrarFila();
+                    break;
+                case 5:
+                    System.out.println("Gracias por usar el sistema de turnos, si nos pone 10 le regalamos un gansito :D");
+                    break;
+                default:
+                    System.out.println("Opción inválida, por favor elige una opción del 1 al 5.");
+            }
+        } while (opcionTurnos != 5);
 
-        System.out.println();
-        System.out.println("Cajero disponible");
-        fila.atenderSiguiente(); /*Atiende al siguiente cliente en la fila*/
-        fila.atenderSiguiente(); /*Atiende al siguiente cliente en la fila*/
-
-        System.out.println();
-        fila.ostrarFila();
-        fila.mostrarEstado();
 
 
 
