@@ -26,8 +26,6 @@ public class main {
             opcion = sc.nextInt();
             sc.nextLine(); //Se limpia el buffer
 
-
-
            
             switch (opcion){
                 case 1:{
@@ -98,6 +96,15 @@ public class main {
           
 
         /*TURNOS */
+
+
+
+
+
+
+
+        /*ESTACIONES*/
+        
 
     }    
     
