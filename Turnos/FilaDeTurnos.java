@@ -72,8 +72,5 @@ public class FilaDeTurnos { /*se crea la clase FilaDeTurnos,todo esto es para de
             System.out.println("FINAL DE LA FILA");
         }
 
-        public void mostrarEstado() {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'mostrarEstado'");
-        }
+       
 }
