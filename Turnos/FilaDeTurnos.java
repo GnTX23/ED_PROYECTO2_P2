@@ -29,8 +29,8 @@ public class FilaDeTurnos { /*se crea la clase FilaDeTurnos,todo esto es para de
             ultimo.siguiente = nuevoTurnos; 
             ultimo = nuevoTurnos;
         }
-        totalEsperando++; /*aumenta el contador */
-        System.out.println("Llego el cliente con turno numero: " + numeroTurno);
+        totalEsperando++; /* se utilizara para aumenta el contador */
+        System.out.println("Llego el cliente con turno numero: " + numeroTurno); /*El System.out imprime el mensaje */
        /*¿por que estudio esto?*/
      }
 
