@@ -4,7 +4,7 @@ import Catalogo.ListaEnlazada;
 import Catalogo.producto;
 import Turnos.FilaDeTurnos;
 import Estaciones.ColaCiclicaEstaciones;
-import Historial_Pedidos.pedidos.pila;
+import Historial_Pedidos.pedidos;
 
 
 public class Main {

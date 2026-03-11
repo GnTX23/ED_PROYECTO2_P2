@@ -18,16 +18,16 @@ public class pedidos {
         int pedido;
         Nodo limite;
 
-        pila() {
+        public pila() {
             this.pedido = 0;
             this.limite = null;
         }
 
-        boolean isEmpty() {
+        public boolean isEmpty() {
             return limite == null;
         }
 
-        void push(String producto) {
+        public void push(String producto) {
             Nodo nuevo = new Nodo(producto);
             if (isEmpty()) {
                 limite = nuevo;
@@ -39,7 +39,7 @@ public class pedidos {
             System.out.println("Producto agregado: " + producto);
         }
 
-        String pop() {
+        public String pop() {
             if (isEmpty()) {
                 System.out.println("No hay productos en la pila.");
                 return null;
@@ -51,7 +51,7 @@ public class pedidos {
             return productoEliminado;
         }
 
-        String peek() {
+        public String peek() {
             if (isEmpty()) {
                 System.out.println("No hay productos en la pila.");
                 return null;
@@ -60,7 +60,7 @@ public class pedidos {
             return limite.producto;
         }
 
-        void mostrar() {
+        public void mostrar() {
             if (isEmpty()) {
                 System.out.println("Historial de pedidos vacio.");
                 return;
