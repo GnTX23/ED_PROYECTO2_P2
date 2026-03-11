@@ -103,7 +103,7 @@ public class ListaEnlazada {
 
     }
       
-    /*MOSTRAR CATÁLOGO PARA JOPTIONSPAGE*/ 
+    /*MOSTRAR CATÁLOGO*/ 
       public void mostrarcatalogo(){
         if (IsEmpty()){
             System.out.println("El catálogo está vacío");
@@ -114,11 +114,11 @@ public class ListaEnlazada {
         producto actual = head;
         int posicion =1 ;
 
-        while (actual != null);
-        System.out.println(posicion + "." + actual);
+        while (actual != null) {
+        System.out.println(posicion + ". " + actual);
         actual = actual.siguiente;
         posicion++;
-    }
+}   }
 
 
 }

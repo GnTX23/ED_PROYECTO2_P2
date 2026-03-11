@@ -4,9 +4,10 @@ import Catalogo.ListaEnlazada;
 import Catalogo.producto;
 import Turnos.FilaDeTurnos;
 import Estaciones.ColaCiclicaEstaciones;
-import Historial_Pedidos.pedidos;
+import Historial_Pedidos.pedidos.pila;
 
-public class main {
+
+public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -14,8 +15,8 @@ public class main {
         /* ── INICIALIZAR ESTRUCTURAS ── */
         ListaEnlazada catalogo = new ListaEnlazada();
         FilaDeTurnos fila = new FilaDeTurnos();
-        ColaCiclicaEstaciones estaciones = new ColaCiclicaEstaciones();
-        pedidos historial = new pedidos();
+        ColaCiclicaEstaciones estaciones = new ColaCiclicaEstaciones(3);
+        pedidos.pila historial = new pedidos.pila();
         int contadorTurnos = 1;
         int opcion = -1;
 
@@ -37,16 +38,14 @@ public class main {
             System.out.println("--- TURNOS DE ATENCION ---");
             System.out.println(" 6. Registrar llegada de cliente");
             System.out.println(" 7. Atender siguiente cliente");
-            System.out.println(" 8. Ver siguiente en fila");
-            System.out.println(" 9. Mostrar fila completa");
+            System.out.println(" 8. Mostrar fila completa");
             System.out.println("--- ESTACIONES DE SERVICIO ---");
-            System.out.println("10. Rotar estacion");
-            System.out.println("11. Ver estado de estaciones");
+            System.out.println(" 9. Rotar estacion");
             System.out.println("--- HISTORIAL DE PEDIDOS ---");
-            System.out.println("12. Registrar pedido");
-            System.out.println("13. Deshacer ultimo pedido");
-            System.out.println("14. Ver pedido en tope");
-            System.out.println("15. Ver historial completo");
+            System.out.println("10. Registrar pedido");
+            System.out.println("11. Deshacer ultimo pedido");
+            System.out.println("12. Ver pedido en tope");
+            System.out.println("13. Ver historial completo");
             System.out.println("----------------------------------------");
             System.out.println(" 0. Salir");
             System.out.print("Elige una opcion: ");
@@ -105,40 +104,36 @@ public class main {
                     break;
                 case 7:
                     fila.atenderSiguiente();
-                    break;
-                case 8:
                     fila.verSiguiente();
                     break;
-                case 9:
+                case 8:
                     fila.ostrarFila();
                     break;
 
                 /* ══ ESTACIONES ══ */
-                case 10: {
+                case 9: {
                     System.out.print("Nombre del personal: ");
                     String personal = sc.nextLine();
                     estaciones.rotarEstaciones(personal);
-                    break;
-                }
-                case 11:
                     estaciones.mostrarCola();
                     break;
+                }
 
                 /* ══ HISTORIAL ══ */
-                case 12: {
+                case 10: {
                     System.out.print("Nombre del pedido: ");
                     String pedido = sc.nextLine();
                     historial.push(pedido);
                     break;
                 }
-                case 13:
+                case 11:
                     historial.pop();
                     break;
-                case 14:
+                case 12:
                     historial.peek();
                     break;
-                case 15:
-                    historial.mostrarHistorial();
+                case 13:
+                    historial.mostrar();
                     break;
 
                 case 0:
