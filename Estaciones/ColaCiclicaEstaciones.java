@@ -159,4 +159,9 @@ public class ColaCiclicaEstaciones {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'rotarEstaciones'");
     }
+
+    public void agregar(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'agregar'");
+    }
 }
